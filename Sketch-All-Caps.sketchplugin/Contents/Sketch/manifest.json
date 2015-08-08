@@ -1,0 +1,25 @@
+{
+  "name" : "Sketch All Caps",
+  "description" : "Sketch plugin that lets you toggle all caps on/off in selected text layers.",
+  "author" : "Eivind Bohler",
+  "authorEmail" : "eivind.bohler@gmail.com",
+  "homepage": "http://github.com/eivindbohler/Sketch-All-Caps",
+  "version" : 1.0,
+  "identifier" : "com.eivindbohler.sketch-allcaps",
+  "compatibleVersion": 3.3,
+  "commands" : [
+    {
+      "script" : "allcaps.cocoascript",
+      "handler" : "allCaps",
+      "shortcut" : "cmd shift k",
+      "name" : "All caps on/off",
+      "identifier" : "allCaps"
+    },
+  ],
+  "menu": {
+    "isRoot": true,
+    "items": [
+      "allCaps",
+    ],
+  }
+}

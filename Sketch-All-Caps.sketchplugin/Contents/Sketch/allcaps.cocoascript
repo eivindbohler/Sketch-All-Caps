@@ -1,0 +1,38 @@
+var allCaps = function(context) {
+
+  var doc = context.document
+  var selection = context.selection
+
+  var textLayers = [NSMutableArray array]
+  for (var i = 0; i < selection.count(); i++) {
+    var layer = selection[i]
+    if ([layer isKindOfClass:[MSTextLayer class]]) {
+      [textLayers addObject:layer]
+    }
+  }
+  if ([textLayers count] == 0) {
+    doc.showMessage("Please select one or more text layers.")
+    return
+  }
+
+  for (var i = 0; i < [textLayers count]; i++) {
+    var textLayer = textLayers[i]
+    var textString = [textLayer stringValue]
+
+    var key = "sketch-allcaps-" + [NSString stringWithFormat: "%p", textLayer] + textString.toLowerCase()
+    var storedString = [[NSUserDefaults standardUserDefaults] stringForKey:key]
+
+    if (storedString == nil) {
+      [[NSUserDefaults standardUserDefaults] setObject:textString forKey:key]
+      [textLayer setStringValue:textString.toUpperCase()]
+    } else {
+      [textLayer setStringValue:storedString]
+      [[NSUserDefaults standardUserDefaults] setObject:nil forKey:key]
+    }
+
+    [[NSUserDefaults standardUserDefaults] synchronize]
+
+    textLayer.objectDidChange()
+    textLayer.adjustFrameToFit()
+  }
+};
