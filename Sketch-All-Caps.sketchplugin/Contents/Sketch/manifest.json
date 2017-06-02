@@ -6,6 +6,7 @@
   "homepage": "http://github.com/eivindbohler/Sketch-All-Caps",
   "version" : 1.0,
   "identifier" : "com.eivindbohler.sketch-allcaps",
+  "appcast": "https://api.sketchpacks.com/v1/plugins/com.eivindbohler.sketch-allcaps/appcast",
   "compatibleVersion": 3.3,
   "commands" : [
     {
