@@ -1,4 +1,5 @@
 # Sketch All Caps
+[![Download from Sketchpacks.com](https://badges.sketchpacks.com/plugins/com.eivindbohler.sketch-allcaps/version.svg)](https://api.sketchpacks.com/v1/plugins/com.eivindbohler.sketch-allcaps/download) [![Compatible Sketch Version](https://badges.sketchpacks.com/plugins/com.eivindbohler.sketch-allcaps/compatibility.svg)](https://sketchpacks.com/eivindbohler/Sketch-All-Caps)
 
 Sketch plugin that lets you toggle all caps on/off in selected text layers.
 
